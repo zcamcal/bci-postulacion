@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: ${ENVIRONMENT:local}
+  application:
+    name: sign
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
+    driverClassName: driver
+  jpa:
+    database-platform: dialecto
+     
+springdoc:
+  swagger-ui:
+    enabled: true
+    
+server:
+  port: 8080
+  servlet:
+    context-path: /api/sign
+
+sign:
+  patterns:
+    password: ${PASSWORD_PATTERN}
+    
+
